@@ -138,11 +138,22 @@ class NiceArtisanController extends AppController {
 
         try {
             Artisan::call($command, $params);
+            $output = Artisan::output();
+            $http_code = 200;
         } catch (Exception $e) {
-            return back()->with('error', $e->getMessage());
+            $output = $e->getMessage();
+            $http_code = 400;
         }
 
-        return back()->with('output', Artisan::output());
+        if ($request->ajax()) {
+            $response = new Response($output, $http_code);
+            $response->header('Content-Type', 'text/plain');
+            return $response;
+        }
+        else {
+            return back()->with($http_code == 400 ? 'error' : 'output', $output);
+        }
+
     }
 
 }
