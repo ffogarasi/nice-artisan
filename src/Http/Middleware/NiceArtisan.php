@@ -3,6 +3,7 @@
 namespace FFogarasi\NiceArtisan\Http\Middleware;
 
 use Closure;
+use \Illuminate\Http\Request;
 
 class NiceArtisan
 {
