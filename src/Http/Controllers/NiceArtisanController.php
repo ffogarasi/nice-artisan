@@ -7,6 +7,7 @@ use AppController;
 use Artisan;
 use Exception;
 use Illuminate\Http\Request;
+use \Illuminate\Http\Response;
 
 class NiceArtisanController extends AppController {
 
@@ -138,11 +139,21 @@ class NiceArtisanController extends AppController {
 
         try {
             Artisan::call($command, $params);
+            $output = Artisan::output();
+            $http_code = 200;
         } catch (Exception $e) {
-            return redirect()->back()->with('error', $e->getMessage());
+            $output = $e->getMessage();
+            $http_code = 400;
         }
 
-        return redirect()->back()->with('output', Artisan::output());
+        if ($request->ajax()) {
+            $response = new Response($output, $http_code);
+            $response->header('Content-Type', 'text/plain');
+            return $response;
+        }
+        else {
+            return redirect()->back()->with($http_code == 400 ? 'error' : 'output', $output);
+        }
     }
 
 }
