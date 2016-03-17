@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace FFogarasi\NiceArtisan\Http\Middleware;
 
 use Closure;
 
