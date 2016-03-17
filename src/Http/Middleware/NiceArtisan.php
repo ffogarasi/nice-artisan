@@ -24,7 +24,14 @@ class NiceArtisan
         if ( !$config_token || $nice_token != $config_token) {
 
             if (!$this->checkUser($request)) {
-                abort(403, 'Access denied');
+                if ($request->ajax()) {
+                    $response = new Response('Access denied', 403);
+                    $response->header('Content-Type', 'text/plain');
+                    return $response;
+                }
+                else {
+                    return redirect()->to('/')->with('error', 'Acces denied!');
+                }
             }
         }
 
