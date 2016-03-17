@@ -1,8 +1,8 @@
 <?php
 
-namespace Bestmomo\NiceArtisan\Http\Controllers;
+namespace FFogarasi\NiceArtisan\Http\Controllers;
 
-use Bestmomo\NiceArtisan\Http\Kernel;
+use FFogarasi\NiceArtisan\Http\Kernel;
 use AppController;
 use Artisan;
 use Exception;

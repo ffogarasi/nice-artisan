@@ -1,6 +1,6 @@
 <?php
 
-namespace Bestmomo\NiceArtisan\Http;
+namespace FFogarasi\NiceArtisan\Http;
 
 use AppKernel;
 

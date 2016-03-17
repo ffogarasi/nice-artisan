@@ -1,6 +1,6 @@
 <?php
 
-namespace Bestmomo\NiceArtisan;
+namespace FFogarasi\NiceArtisan;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
