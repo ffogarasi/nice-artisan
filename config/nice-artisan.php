@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'nice_token' => ''
+    'token' => ''
 ];
 
