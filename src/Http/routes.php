@@ -1,6 +1,7 @@
 <?php
 
 Route::group(['prefix' => 'niceartisan'], function () {
-    get('/{option?}', '\Bestmomo\NiceArtisan\Http\Controllers\NiceArtisanController@show');
-    post('item/{class}', '\Bestmomo\NiceArtisan\Http\Controllers\NiceArtisanController@command');
+    get('/{option?}', '\FFogarasi\NiceArtisan\Http\Controllers\NiceArtisanController@show');
+    post('item/{class}', '\FFogarasi\NiceArtisan\Http\Controllers\NiceArtisanController@command');
+    post('rest_item/{class}', '\FFogarasi\NiceArtisan\Http\Controllers\NiceArtisanController@command');
 });

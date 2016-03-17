@@ -1,13 +1,13 @@
 {
-  "name": "bestmomo/nice-artisan",
+  "name": "ffogarasi/nice-artisan",
   "description": "Web interface for Laravel Artisan",
-  "homepage": "http://github.com/bestmomo/nice-artisan",
+  "homepage": "http://github.com/ffogarasi/nice-artisan",
   "license": "MIT",
   "authors": [
     {
-      "name": "Bestmomo",
-      "email": "grandheretique@free.fr",
-      "homepage":"http://laravel.sillo.org"
+      "name": "Fogarasi Ferenc",
+      "email": "ffogarasi@gmail.com",
+      "homepage":""
     }
   ],
   "require": {
@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Bestmomo\\NiceArtisan\\": "src/"
+      "FFogarasi\\NiceArtisan\\": "src/"
     }
   }
 }
