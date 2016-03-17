@@ -17,7 +17,7 @@ class NiceArtisan
      */
     public function handle(Request $request, Closure $next)
     {
-        $nice_token = $request->input('nice_token');
+        $nice_token = $request->input('_token');
 
         $config_token = Config('nice-artisan.token');
 
